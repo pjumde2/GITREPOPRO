@@ -1,0 +1,592 @@
+public static void main(String args[]) {
+        String str="Adventurous Universe";
+        String str1=str.toLowerCase();
+        char[] ch=str1.toCharArray();
+  
+    int total=0, count=1;
+
+   for(int i=0;i<=ch.length-1;i++)
+     {
+       for(int j=i+1;j<=ch.length-1;j++)
+       {
+         if(ch[i]==ch[j])
+         {
+          ch[j]=' ';
+           count++;
+         } 
+       }
+         if(ch[i]!=' ')
+         {
+           sysout(ch[i]+"-----"+count);
+           total=total+count;
+         }
+          count=1;          
+      }
+    sysout("Total cnt are: "+total);
+}
+
+
+public static void main(String[] args) {
+        int m=0,flag=0,n,i;
+        Scanner sc= new Scanner(System.in);
+          n=sc.nextInt();
+         
+        m=n/2;
+       if(n==0||n==1)
+      {
+         sysout(n+"is not prime no");
+         
+      }else{
+             for(i=2;i<=m;i++){
+                 if(n%i==0)
+              {
+                sysout(n+"is not prime no")
+                 flag=1;
+                  break;
+               }
+             }if(flag==0)
+              {
+                sysout(n+"is prime no");
+              }
+       }
+}   
+       
+
+public static void main(String[] args){
+      int sum=0,n,temp,rem;
+      sysout("Enter the no: ");
+      Scanner sc= new Scanner (System.in);
+       n=sc.nextInt();
+       temp=n;
+       
+      while(n!=0)
+   {
+      rem=n%10;
+      sum=(sum*10)+rem;
+      n=n/10;
+   }
+    if(temp==sum)
+     sysout(sum+"is palindrome no");
+    else
+      sysout(sum+"is not palindrome no");
+ }
+     
+
+
+
+public static void main(String[] args) {
+   int a,b,c,temp,largest_no;
+   Scanner sc=new Scanner(System.in);
+
+   sysout("Enter the 1st no: "); 
+     a= sc.nextInt();
+     
+   sysout("Enter the 2nd no: ");
+     b=sc.nextInt();
+
+   sysout("Enter the 3rd no: ");
+      c=sc.nextInt();
+  
+    temp=a>b?a:b;
+    largest_no = temp>c?temp:c;
+     
+       sysout("The Largest no is: "+largest_no);
+}
+
+
+public static void main(String[] args){
+   String str= "hello world";
+   String str1= "";
+     for(int i=str.length()-1; i>=0;i--){
+        str1=str1+str.charAt(i);
+       }
+      System.out.println("rev strng is:"+str1);
+}
+
+
+
+
+String str="JAVA IS EVERGREEN LANGUAGE";
+Sring [] str1=str.split(" ");
+String str2=" ";
+
+for(int i=str.length()-1;i>=0;i--) {
+      str2=str2+" "+str1[i];
+    }
+   System.out.println("Reverse word: "+str2);
+  }
+}
+
+
+
+public static void main(String args[]) {
+       int rev=0,rem,n;
+       n=589068;
+      while(n!=0)
+    {
+       rem=n%10;
+       rev=rev*10+rem;
+       n=n/10;
+    }
+       sysout("The reverse no is: "+rev);
+ } 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+package practise1;
+
+public class CountingLetter {
+
+  public static void main(String[] args) {
+		
+		String str = "#GeeKs 01 fOr @ & gEEks 07";
+		int lower=0,upper=0,num=0,special=0;
+		
+		
+		String str1=str.replaceFirst("\\s", "");----->remove all whitespaces
+		System.out.println(" New string is:" +str1);
+		
+		for(int i=0;i<=str1.length()-1;i++)
+		{
+			char ch=str1.charAt(i);
+			
+			 if(ch>='a' && ch<='z')
+				lower++;
+			else
+			  if(ch>='A' && ch<='Z')
+				upper++;
+			else
+			  if(ch>='0' && ch<='9')
+			        num++;
+			else
+			    special++;
+			
+		}
+		
+		System.out.println("Lower case letters:" +lower);
+		System.out.println("Upper case Letters: " +upper);
+		System.out.println("Numbers are: "+num);
+		System.out.println("Special char are: "+special);
+	}
+
+}
+
+
+
+
+
+package practise1;
+
+public class EqualArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int a1[]= {1,2,3,4};
+		int a2[]= {1,2,3,4};
+		
+		boolean status=true;
+		
+		if(a1.length==a2.length)
+		{
+			for(int i=0;i<=a1.length-1;i++)
+			{
+				if(a1[i]!=a2[i])	
+			  	status=false;
+			}
+		}
+		
+		else
+			status=false;
+		
+		if (status==true)
+
+			     System.out.println("Arrays are Equal");
+				
+		  else
+	                     System.out.println("Arrays are not Equal");
+	}
+
+}
+
+
+
+
+
+
+
+
+EqualArray package practise1;
+
+import java.util.Scanner;
+
+public class MissingNumber {
+
+	public static void main(String[] args) {
+		
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter n values:");
+		
+		int n=scan.nextInt();
+		
+  //Array should not have duplicates
+    //Array no need to be sorted order
+    //Values should be in proper range
+			
+		int A1[]=new int[n];   ---------------->This line declares an integer array A1 of size n
+		System.out.println("Enter n-1 values: ");
+		for(int i=0;i<n-2;i++)
+		{
+		  A1[i]=scan.nextInt();
+		}
+		
+		int sumOfAll=(n*(n+1))/2;
+		int sumofarray=0;
+		for(int i=0;i<n-2;i++)
+		{
+	          sumofarray=sumofarray+A1[i];
+		}
+		
+		int missingNumber=sumOfAll-sumofarray;
+		
+		System.out.println("Missing number in Array is: "+missingNumber);
+	}
+
+}
+
+
+package practise1;
+
+public class PrintNoWithoutLoop {
+
+   public static void main(String[] args) {
+
+        //declaring an integer variable 'number' 
+        //and initializing it 1
+        int num = 1;
+        
+        //user defined method displayNumber()
+        System.out.print("Printing numbers: "); 
+        displayNumber(num);  
+	}
+
+	 //displayNumber() to print from 50 to 100
+    public static void displayNumber(int num)
+    {
+        if(num <= 50)
+        {
+            System.out.print(num +" "); 
+            //calling displayNumber() method recursively
+            displayNumber(num + 1);
+        }    
+    } 
+}
+
+
+package practise1;
+
+public class ReverseArray {
+
+	public static void main(String[] args) {
+		 
+        int [] arr = new int [] {1, 2, 3, 4, 5};  
+        System.out.println("Original array: ");  
+        for (int i = 0; i < arr.length; i++) {  
+            System.out.print(arr[i] + " ");  
+        }  
+        System.out.println();  
+        System.out.println("Array in reverse order: ");  
+        //Loop through the array in reverse order  
+        for (int i = arr.length-1; i>= 0; i--) {  
+            System.out.print(arr[i] + " ");  
+	}
+    }
+}
+   
+
+package practise1;
+
+import java.util.Arrays;                        
+
+public class SecondSmallestNoInArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// Creating the array
+        int arr[] = {12, 2, 34, 20, 54, 6};
+        
+        // Sorts the array in ascending order
+        Arrays.sort(arr);
+        // Prints the array elements
+        System.out.println("The array elements are : "+Arrays.toString(arr));------>convert sorted arr elements into string
+        
+        // Prints the second smallest element
+        System.out.println("The second smallest element of the array is : "+arr[1]);
+	}
+
+}
+
+
+package practise1;
+
+import java.util.Arrays;
+
+public class SmallestNoInArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// Creating the array
+        int arr[] = {12, 2, 34, 20, 54, 6};
+        // Initializing the first element of the array to small
+        int small=arr[0];        
+        
+        // Compares all the element to find out the smallest one
+       for(int i:arr)
+        {
+        	//for(int i=0;i<=arr.length-1;i++)
+        	//{
+        	//i=arr[0];
+        	
+        			if(small>i)
+                small=i;
+        }
+        // Prints the array elements
+        System.out.println("The array elements are"+Arrays.toString(arr));
+        
+        // Prints the smallest element
+        System.out.println("The smallest element of the array is: "+small);
+	}
+
+}
+
+
+package practise1;
+
+import java.util.Scanner;
+
+public class SumOfOdds {
+
+	public static void main(String[] args) {
+	
+		int Size, i, OddSum = 0;
+		Scanner sc = new Scanner(System.in);
+	 
+		System.out.print(" Please Enter Number of elements in an array : ");
+		Size = sc.nextInt();	
+		
+		int [] a = new int[Size];------->declares and initializes an array named 'a'
+		
+		System.out.print(" Please Enter " + Size + " elements of an Array  : ");
+		for (i = 0; i < Size; i++)
+		{
+		   a[i] = sc.nextInt();
+		}   
+ 
+		for(i = 0; i < Size; i++)
+		{
+			if(a[i] % 2 != 0)
+			{
+				OddSum = OddSum + a[i]; 
+			}
+		}		
+		System.out.println("\n The Sum of Odd Numbers in this Array = " + OddSum);
+	}
+
+ }
+
+
+package practise1;
+
+public class DivisionFunctionality {
+
+	public static void main(String[] args) {
+		
+		DivisionFunctionality div=new DivisionFunctionality();
+		div.getReminder(17,5);		
+
+	}
+
+	private void getReminder(int divident, int divisor) {
+			
+		int count=0;
+		int reminder=0;
+		
+		while(divident>=divisor)
+		{
+			reminder=divident-divisor;
+			count++;
+			divident=divident-divisor;
+		}
+		
+	System.out.println("Quotient is:"+count+" Reminder is: "+reminder);
+	}
+
+}
+
+
+package Programs;
+
+public class FibonacciSeries {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n1=0,n2=1,n3,count=4;
+		 System.out.print(n1+" "+n2);//printing 0 and 1    0  1
+		    
+		 for(int i=2;i<count;i++)//loop starts from 2 because 0 and 1 are already printed    
+		 {    
+		  n3=n1+n2;  
+		  System.out.print(" "+n3);  //1 2  
+		  n1=n2;    //1
+		  n2=n3;    //1 2
+		 } 
+	}
+       
+}
+
+
+
+package practise1;
+
+public class RandomNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		 //generating random numbers using Math.random()Function
+        //and printing that Number
+        System.out.println("Random Number = " + Math.random());
+    }
+}
+
+
+package practise1;
+
+public class RandomNumber2 {
+
+public static void main(String[] args) {
+				
+int min = 200;  
+int max = 400;  
+//Generate random double value from 200 to 400   
+System.out.println("Random value of type double between "+min+" to "+max+ ":");  
+double a = Math.random()*(max-min+1)+min;   
+System.out.println(a);  
+//Generate random int value from 200 to 400   
+System.out.println("Random value of type int between "+min+" to "+max+ ":");  
+int b = (int)(Math.random()*(max-min+1)+min);  
+System.out.println(b);  
+
+  }
+
+}
+
+
+
+package Programs;
+
+public class convrt_InttoStrng {
+
+	public static void valueOf(int i) {
+		// TODO Auto-generated method stub
+
+	   int i1=200;
+		 
+           String s=String.valueOf(i1);
+		
+           System.out.println(s);
+   }
+
+}
+
+
+
+package practise1;
+
+public class StringToInt {------------------->correct code
+
+	public static void main(String[] args) {
+		
+		String  s="100";
+		
+		int i=Integer.parseInt(s);
+		
+		System.out.println(i);
+
+	}
+
+}
+
+
+
+public static void main(String[] args){
+  String s="200";
+  int i=Integer.parseInt(s);
+  sysout(i);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Queries
+
+Select * From Customers;
+
+Select * From Customers Where Country="Spain";
+
+
+Select * From Customers Where CustomerName="Harry" AND Country="Mexico";
+
+Select * From Customers Where CustomerName="John" OR Country="Germany";
+
+Select * From Customers Where NOT Country="Mexico";
+
+DELETE From customers where Customerid="101";
+
+UPDATE Customers Set Country="Germnany" where customerName="Harry";
+
+Select * From Customers ORDER BY Price DESC;
+
+Select MIN Price FROm Product;
+
+Select MAX Price FROM Product;
+
+INSERT INTO(Customer Name, Customer id, Country, Contact no);
+Value("Harry","101","Germany","8947575893");
+
+
+JOINS
+Primary keys serve as unique identifiers for each row in a database table. 
+Foreign keys link data in one table to the data in another table.
+
+
+
+
+
+
+
+cucumber things 	
+
+BDD framework
+
+cucumber docs
+selenium cucumber framework
+cucumber with selenium
+Automation Testing Using
+
+
+Protocheck tablet
+  Framework 
+   SQL queries
+     Java concepts 
+       Selenium cmnds
+         Error codes 
